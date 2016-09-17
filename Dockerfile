@@ -7,8 +7,8 @@ RUN yum install -y nodejs
 RUN yum install -y npm
 RUN npm install -g grunt-cli
 RUN ["mkdir", "/appjs"]
-ADD optimize.sh /tmp/
-CMD ["sh", "/tmp/optimize.sh"]
+COPY optimize.sh /tmp/
+#CMD ["sh", "/tmp/optimize.sh"]
 #RUN ["cd", "/appjs/grunt"]
 #ENTRYPOINT /usr/bin/npm
 #CMD ["npm", "install"]
