@@ -7,6 +7,6 @@ RUN yum install -y nodejs
 RUN yum install -y npm
 RUN npm install -g grunt-cli
 RUN ["mkdir", "/appjs"]
-RUN ["cd", "/appjs;", "npm"]
+RUN ["cd", "/appjs"]
 RUN ["npm", "install"]
-CMD ["grunt", "optimize"]
+RUN ["grunt", "optimize"]
