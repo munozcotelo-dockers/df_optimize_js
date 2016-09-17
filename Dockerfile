@@ -1,6 +1,7 @@
 # version 1.0
-from centos:7
-maintainer Alvaro Muñoz "alvaro.munozgarcia@gmail.com"
-run yum update -y
-run yum install -y node
-run yum install -y npm
+FROM centos:7
+MANTAINER Alvaro Muñoz "alvaro.munozgarcia@gmail.com"
+RUN yum update -y
+RUN yum install -y epel-release
+RUN yum install -y node
+RUN yum install -y npm
