@@ -6,7 +6,7 @@ RUN yum install -y epel-release
 RUN yum install -y nodejs
 RUN yum install -y npm
 RUN npm install -g grunt-cli
-CMD ["mkdir", "/appjs"]
-CMD ["cd", "/appjs"]
-CMD ["npm", "install"]
+RUN ["mkdir", "/appjs"]
+RUN ["cd", "/appjs;", "npm"]
+RUN ["npm", "install"]
 CMD ["grunt", "optimize"]
