@@ -9,4 +9,4 @@ RUN npm install -g grunt-cli
 RUN ["mkdir", "/appjs"]
 RUN ["cd", "/appjs"]
 ENTRYPOINT /usr/bin/npm
-CMD start
+CMD install
