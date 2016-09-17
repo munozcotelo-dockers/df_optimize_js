@@ -8,5 +8,6 @@ RUN yum install -y npm
 RUN npm install -g grunt-cli
 RUN ["mkdir", "/appjs"]
 RUN ["cd", "/appjs"]
-RUN npm install
+ENTRYPOINT npm
+RUN install
 RUN ["grunt", "optimize"]
