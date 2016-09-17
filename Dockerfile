@@ -8,5 +8,5 @@ RUN yum install -y npm
 RUN npm install -g grunt-cli
 RUN ["mkdir", "/appjs"]
 RUN ["cd", "/appjs"]
-ENTRYPOINT /usr/bin/npm
-CMD install
+#ENTRYPOINT /usr/bin/npm
+CMD ["npm", "install"]
